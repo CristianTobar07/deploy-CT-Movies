@@ -1,7 +1,6 @@
 import { SimpleMovieResponse } from "@/components/movies";
 import { BackButton } from "@/components/movies/components/BackButton";
 import { Metadata } from "next";
-import Image from "next/image";
 import { IoPlayOutline } from "react-icons/io5";
 
 interface Props {
@@ -46,7 +45,7 @@ export default async function MoviesPage({ params }: Props) {
           <div className="flex flex-wrap w-full justify-center gap-4">
             <div className="flex flex-col justify-center items-center">
               <div>
-                <Image src={Poster} width={180} height={150} alt={Title} />
+                <img src={Poster} width={180} height={150} alt={Title} />
 
                 <button className="flex bg-yellow-400 w-full text-sm mt-1 font-semibold p-2 align-middle items-center gap-2 rounded-s-sm text-center justify-center">
                   <span>Trailer Oficial</span>

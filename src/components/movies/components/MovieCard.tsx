@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import { useAppDispatch, useAppSelector } from "@/store";
 import { toggleFavorite } from "@/store/favorites/favorites";
@@ -28,13 +27,12 @@ export const MovieCard = (movieCard: MovieCardProps) => {
       <div className="flex flex-col bg-zinc-800 rounded overflow-hidden">
         <div className="flex flex-col text-center  border-b">
           {Poster?.length > 3 ? (
-            <Image
+            <img
               key={imdbID}
               src={Poster}
               width={130}
               height={80}
               alt={Title}
-              priority={false}
               style={{
                 objectFit: "cover",
                 borderRadius: "5px",
