@@ -20,9 +20,13 @@ const sidebarSlice = createSlice({
       }
       state.categorieSelected = action.payload;
     },
+    resetCategorieSelected(state) {
+      state.categorieSelected = undefined;
+    },
   },
 });
 
-export const { changeCategorieSelected } = sidebarSlice.actions;
+export const { changeCategorieSelected, resetCategorieSelected } =
+  sidebarSlice.actions;
 
 export default sidebarSlice.reducer;
